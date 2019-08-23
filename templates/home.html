@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WCount - Homepage</title>
+</head>
+<body>
+  <h1>WCount - Homepage</h1>
+  <a href="{% url 'home' %}">Start Again</a>
+  ||
+  <a href="{% url 'about' %}">About</a>
+  <h2>{{hi_there}}</h2>
+  <form action="{% url 'count' %}">
+    <textarea cols="40"
+              rows="10"
+              name="fulltext">
+    </textarea>
+    <br/>
+    <input type="submit"
+           value="Count!"/>
+  </form>
+</body>
+</html>

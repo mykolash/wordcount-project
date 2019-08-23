@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WCount - Count</title>
+</head>
+<body>
+  <h1>WCount - Count</h1>
+  <a href="{% url 'home' %}">Start Again</a>
+  ||
+  <a href="{% url 'about' %}">About</a>
+  <h2>There are {{ wordlist_count }} words or {{ fulltext_count }} symbols in your text:</h2>
+  <br/>
+  <h2>"{{ fulltext }}"</h2>
+  <br/>
+  <br/>
+  <h2>Full words dictionary is:</h2>
+  <h2>{{ worddict }}</h2>
+  <br/>
+  <br/>
+  <h2>Words sorted by count:</h2>
+  {% for word, counttotal in sortedwords %}
+    <h4>{{ word }}: {{ counttotal }}</h4>
+  {% endfor %}
+</body>
+</html>
