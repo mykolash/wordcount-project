@@ -31,4 +31,4 @@ def count(request):
 
 
 def about(request):
-    return render(request, "about.html", {"me": "django rookie"})
+    return render(request, "about.html", {"me": "Django Rookie"})
